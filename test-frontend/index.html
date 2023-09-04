@@ -14,6 +14,7 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="./ostx_files/order.css" />
+    <link rel="stylesheet" href="./style.css" />
 
 
     <!-- Header/Footer Styles -->
@@ -71,192 +72,17 @@
             font-style: normal;
         }
 
-        .pagina-interior .multimedia img,
-        .pagina-interior .multimedia picture {
-            z-index: 1074;
-            position: relative;
+        @media (min-width: 1400px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
+                max-width: 1320px;
+            }
         }
-
-        .offcanvas {
-            width: 200px;
-            padding: 20px 30px;
-            position: absolute;
-            background-color: #ffffff;
-            z-index: 1999;
-            margin-top: 75px;
-
-        }
-
-        .text {
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        .sticky-top {
-            right: 0;
-            left: 0;
-            filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.15));
-            display: block;
-            background-color: #ffffff;
-            padding: 16px 20px !important;
-            border-bottom: 1px solid #C1C1C1;
-            position: relative;
-            z-index: 200;
-        }
-
-        .navbar-nav {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-
-        .popover-body {
-            padding: 1rem 0.5rem;
-            color: #e9ecef;
-
-        }
-
-        .desktop {
-            display: block;
-        }
-
-        .popover {
-            position: absolute;
-            z-index: 20000;
-            max-width: 276px;
-            font-size: 0.9625rem;
-            background-color: #ffffff;
-            border-width: 1px;
-            border-color: rgba(51, 51, 51, 0.175);
-            border-radius: 12px;
-            box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.15);
-            display: block;
-            line-height: 1.6;
-            margin-top: 50px;
-            overflow: hidden;
-
-        }
-
-        .popover-arrow {
-            position: absolute;
-            left: 0px;
-            top:200px;
-            transform: translate3d(187px, 20px, 0px)
-        }
-
-        .popover .popover-arrow:after,
-        .popover .popover-arrow:before {
-            position: absolute;
-            display: block;
-            content: "";
-            border-color: transparent;
-            border-style: solid;
-            border-width: 0;
-
-        } 
-
-        .mobile {
-            display: none;
-        }
-
-        #main-menu {
-            z-index: 99999 !important;
-            height: 70px !important;
-        }
-
-        .justify-content-between {
-            justify-content: space-between !important;
-        }
-
-        .flex-fill {
-            flex: 1 1 auto !important;
-        }
-
-        .d-flex {
-            display: -webkit-box !important;
-            display: -ms-flexbox !important;
-            display: flex !important;
-        }
-
-
-        .navbar {
-            padding: 0 0.5rem;
-            color: rgba(51, 51, 51), 0.65;
-            font-size: 1.375rem;
-            /* position: relative; */
-            /* display: -webkit-box;
-            display: -ms-flexbox; */
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-
-        }
-
-        .navbar-toggler {
-            background: url('http://www.w3.org/2000/svg');
-            transition: box-shadow 0.15s ease-in-out;
-        }
-
-        .nav {
-            background-color: #ffffff;
-            padding: 16px 20px !important;
-            border-bottom: 1px solid #C1C1C1;
-        }
-
-        #logo {
-            height: 38px;
-            margin-right: 8px;
-            margin-bottom: 1px;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .nav-link {
-            font-weight: 800;
-            font-size: 1.1rem;
-            color: #333;
-            text-transform: uppercase;
-            padding: 0 !important;
-            text-decoration: none !important;
-        }
-
-        #search_icon {
-            margin-right: 1.4rem;
-        }
-
-        .icon icon-24 icon-apps {
-            position: relative;
-
-        }
-
-
-        .navbar-right {
-            display: flex !important;
-            position: relative;
-            gap: 1rem;
-            width: 200px;
-
-        }
-
-        .navbar-right .nav-link {
-            display: flex;
-            flex-direction: column;
-            z-index: 2000;
-            justify-content: space-around;
-        }
-
-        .metroplay img {
-            width: 147px;
-            height: 20px;
-            background-color: #333;
-            padding: 4px 12px;
-            border-radius: 200px;
-        }
-
         .a3mod_player {
             padding-top: 0 !important;
         }
@@ -305,32 +131,6 @@
             width: 100%;
         }
 
-        @media (max-width: 992px) {
-            .navbar-expand-lg {
-                flex-wrap: nowrap;
-                justify-content: flex-start;
-            }
-
-            .mobile {
-                display: block;
-            }
-
-            .desktop {
-                display: none;
-            }
-
-            .metroplay img {
-           background-color: transparent;
-
-            }
-
-        }
-
-        @media (max-width: 600px) {
-            .autor-area {
-                flex-direction: column;
-            }
-        }
     </style>
 
     <!-- Carga de Favicon -->
@@ -359,101 +159,114 @@
 
 <body class="pagina-interior programas el-hormiguero invitados" data-new-gr-c-s-check-loaded="14.1107.0"
     data-gr-ext-installed="" style="overflow: auto" onload="displayDate()">
+    <div>
+        <div id="search" role="button" class="d-flex gap-3 align-items-center justify-content-between flex-fill hidden">
+            <div class="search">
+                <form role="search" method="get" action="/iskanje/">
+                    <div class="input-group">
+                        <input class="form-control" name="q" id="id_q" placeholder="Iskani niz" type="text" required="">
+                        <button class="btn btn-primary " type="submit">Išči</button>
+                    </div>
+                </form>
+            </div>
+            <button type="button" class="toggle-menu">
+                <span id="close_search" class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+        </div>
+    </div>
     <div id="fbody" class="fbody Home" data-config="third-menu">
         <!-- ==== HEADER ==== -->
-        <div>
-            <div class="offcanvas " role="toggler" tabindex="-1" id="burgermenu">
-                <div class="offcanvas-header">
-                    <span  id="menuTogglerOff" class="material-symbols-outlined">
-                        tab_close
-                    </span>
+        <nav id="metro-menu"
+            class="navbar navbar-expand-lg d-flex gap-5 align-items-center justify-content-between flex-fill">
+
+            <div class="navbar-nav d-flex gap-lg-5 gap-3 align-items-center">
+                <div class="logo-con">
+                    <a href="#order_form"><img id="metro-logo" alt="Metropolitan"
+                            src="https://govorise.metropolitan.si/static/img/metropolitan-logo.0d36f43c124f.svg"></a>
                 </div>
-                <div class="offcanvas-body-drop">
-
-                    <div class="nav-drop">
-                        <div class="navbar-nav-drop">
-
-                            <div class="nav-link d-flex justify-content-between flex-fill align-items-center ">
-                                <a class="text" href="/zanimivosti/">Zanimivosti</a>
-
-
-                            </div>
-
-
-
-
-                            <div class="nav-link d-flex justify-content-between flex-fill align-items-center ">
-                                <a class="text" href="/traci/">Trači</a>
-
-
-                            </div>
-
-
-
-
-                            <div class="nav-link d-flex justify-content-between flex-fill align-items-center ">
-                                <a class="text" href="/astro/">Astro</a>
-
-
-                            </div>
-
-
-
-
-                            <div class="nav-link d-flex justify-content-between flex-fill align-items-center ">
-                                <a class="text href=" /trendi/">Trendi</a>
-
-
-                            </div>
-
-
-
-
-                            <div class="nav-link d-flex justify-content-between flex-fill align-items-center ">
-                                <a class="text" href="/dogodki/">Dogodki</a>
-
-
-                            </div>
-
-
-
-
-                            <div class="nav-link d-flex justify-content-between flex-fill align-items-center ">
-                                <a class="" href="/revija-story/">Story</a>
-
-
-                                <button class="btn btn-icon-menu collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#sub50" aria-expanded="false" aria-controls="sub50">
-                                    <span class="icon icon-24 icon-chevron-right"></span>
-                                </button>
-                            </div>
-
-                            <div id="sub50" data-bs-parent=".navbar-nav"
-                                class="sub navbar-nav flex-fill flex-column collapse ">
-
-                                <div class="nav-item ">
-                                    <a class="nav-link small pt-1 pb-1 " href="/revija-story/story-podkast/">Story
-                                        podkast</a>
-                                </div>
-
-                            </div>
-
-
-
-
-
-                        </div>
-
-                    </div>
+                <div class="navbar-left navbar d-flex gap-3">
+                    <a class="nav-link" href="#order_form"> Novice </a>
+                    <a class="nav-link" href="#order_form"> Sensa </a>
+                    <a class="nav-link" href="#order_form"> Aktivni </a>
+                    <a class="nav-link" href="#order_form"> Govori.se </a>
+                    <a class="nav-link" href="#order_form"> Avtomagazin </a>
+                    <a class="nav-link" href="#order_form"> Elle </a>
+                    <a class="nav-link" href="#order_form"> Cosmopolitan </a>
                 </div>
             </div>
-        </div>
-        <header class="sticky-top fixed-top">
+            <div class="navbar-right navbar d-flex gap-3 align-items-center">
+                <a class="metroplay" href="#order_form">
+                    <img class="desktop" loading="eager" fetchpriority="high" decoding="async"
+                        src="https://govorise.metropolitan.si/static/img/metroplay.eda92f50bc70.svg" alt="metro play">
+                    <img class="mobile " loading="eager" fetchpriority="high" decoding="async"
+                        src="https://govorise.metropolitan.si/static/img/metroplayicon.e3a0acef57df.svg"
+                        alt="metro play">
+                </a>
+                <span id="menuButton" class="material-symbols-outlined">
+                    <i class="icon icon-24 icon-apps"></i>
+                    apps
+                </span>
+            </div>
+        </nav>
+        <header class="sticky-top">
+
             <nav class="navbar">
+                <div class="navbar-left">
+                    <div>
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="burgermenu" role="toggler"
+                            data-bs-backdrop="true" aria-modal="true">
+                            <div class="offcanvas-header">
+                                <button type="button" class="nav-toggler text reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">
+                                    <span class="material-symbols-outlined">
+                                        <i class="icon icon-24 icon-apps"></i>close</span>
+                                </button>
+                            </div>
+                            <div class="offcanvas-body">
+
+                                <div class="d-flex">
+                                    <div
+                                        class="navbar-nav d-flex gap-2 text-primary flex-shrink-1 flex-fill flex-column">
+                                        <div
+                                            class="nav-link d-flex justify-content-between flex-fill align-items-center ">
+                                            <a class="" href="#order_form">Zanimivosti</a>
+                                        </div>
+                                        <div
+                                            class="nav-link d-flex justify-content-between flex-fill align-items-center ">
+                                            <a class="" href="#order_form">Trači</a>
+                                        </div>
+                                        <div
+                                            class="nav-link d-flex justify-content-between flex-fill align-items-center ">
+                                            <a class="" href="#order_form">Astro</a>
+                                        </div>
+                                        <div
+                                            class="nav-link d-flex justify-content-between flex-fill align-items-center ">
+                                            <a class="" href="#order_form">Trendi</a>
+                                        </div>
+                                        <div
+                                            class="nav-link d-flex justify-content-between flex-fill align-items-center ">
+                                            <a class="" href="#order_form">Dogodki</a>
+                                        </div>
+                                        <div
+                                            class="nav-link d-flex justify-content-between flex-fill align-items-center ">
+                                            <a class="" href="#order_form">Story</a>
+                                            <button class="btn btn-icon-menu collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#sub50" aria-expanded="false"
+                                                aria-controls="sub50">
+                                                <span class="icon icon-24 icon-chevron-right"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="navbar-nav">
-                    <button class="navbar-toggler" id="menuToggler" data-bs-toggle="offcanvas"
-                        data-bs-target="#burgermenu" aria-controls="navbarColor01" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    <button type="button" class="nav-toggler" role="toggler">
                         <span class="icon icon-24 icon-burger-menu"></span>
                         <span class="material-symbols-outlined">
                             density_medium
@@ -462,94 +275,68 @@
                     <a href="#order_form" class="nav-link"><img class="logo" id="logo" alt="Govori.se"
                             src="https://govorise.metropolitan.si/static/img/logo.9ef61ecaf812.svg"></a>
                     <br />
-                    <a href="#order_form" class="nav-link">Zanimivosti</a>
-                    <a href="#order_form" class="nav-link">Traci</a>
-                    <a href="#order_form" class="nav-link">Astro</a>
-                    <a href="#order_form" class="nav-link">Trendi</a>
-                    <a href="#order_form" class="nav-link">Dogotki</a>
-                    <a href="#burgermenu" aria-label="Menu" class="more nav-link gap-1" role="button"
-                        aria-expanded="false" data-bs-toggle="offcanvas" data-bs-target="#burgermenu"
-                        aria-controls="#burgermenu">Več <i class="icon icon-24 icon-expand-more"></i></a>
-                    <i class="icon icon-24 icon-expand-more"></i>
-                </div>
-                <div class="navbar-right">
-                    <a class="metroplay" href="#order_form">
-                        <img class="desktop" loading="eager" fetchpriority="high" decoding="async"
-                            src="https://govorise.metropolitan.si/static/img/metroplay.eda92f50bc70.svg"
-                            alt="metro play">
-                        <img class="mobile" loading="eager" fetchpriority="high" decoding="async"
-                            src="https://govorise.metropolitan.si/static/img/metroplayicon.e3a0acef57df.svg"
-                            alt="metro play">
-                    </a>
-                    <a id="search_icon" class="nav-link " data-bs-toggle="offcanvas" data-bs-target="#searchmenu"
-                        aria-controls="#searchmenu">
-                        <span class="material-symbols-outlined">
-                            search
-                        </span>
-                    </a>
-
-                    <span id="menuButton" class="material-symbols-outlined">
-                        <i class="icon icon-24 icon-apps"></i>
-                        apps
-                    </span>
-
-
-                <div class="popover hidden" role="button" id="popover602508">
-                    <div class="popover-arrow"></div>
-                    <div class="popover-body">
-                            <a class="pop-link" href="https://metropolitan.si" title="Metropolitan.si">
-                                <img src="https://govorise.metropolitan.si/static/img/metropolitan-logo.0d36f43c124f.svg"
-                                    alt="Metropolitan">
-                            </a>
-                            <a class="pop-link" href="https://aktivni.metropolitan.si" title="Aktivni.si">
-                                <img src="https://govorise.metropolitan.si/static/img/aktivni-logo.b0edf3929d64.svg"
-                                    alt="Aktivni">
-                            </a>
-                            <a class="pop-link" href="https://cosmopolitan.metropolitan.si" title="Cosmopolitan.si">
-                                <img src="https://govorise.metropolitan.si/static/img/cosmopolitan-logo.0d5356a47970.svg"
-                                    alt="Cosmopolitan.si">
-                            </a>
-                            <a class="pop-link" href="https://elle.metropolitan.si" title="Elle.si">
-                                <img src="https://govorise.metropolitan.si/static/img/elle-logo.3e36442bf250.svg"
-                                    alt="Elle">
-                            </a>
-                            <a class="pop-link" href="https://avtomagazin.metropolitan.si" title="avto-magazin.si">
-                                <img src="https://govorise.metropolitan.si/static/img/avtomagazin-logo.136d30bde124.svg"
-                                    alt="Avto-magazin">
-                            </a>
-                            <a class="pop-link" href="https://govorise.metropolitan.si" title="govori.se">
-                                <img src="https://govorise.metropolitan.si/static/img/govorise-logo.267bcf3df958.svg"
-                                    alt="Govori.se">
-                            </a>
-                            <a class="pop-link" href="https://sensa.metropolitan.si" title="Sensa.si">
-                                <img src="https://govorise.metropolitan.si/static/img/sensa-logo.31d6938d135b.svg"
-                                    alt="Sensa">
-                            </a>
+                    <div class="nav-list">
+                        <a href="#order_form" class="nav-link">Zanimivosti</a>
+                        <a href="#order_form" class="nav-link">Traci</a>
+                        <a href="#order_form" class="nav-link">Astro</a>
+                        <a href="#order_form" class="nav-link">Trendi</a>
+                        <a href="#order_form" class="nav-link">Dogotki</a>
+                        <button type="button" class="nav-toggler">
+                            <i class="icon icon-24 icon-expand-more"></i>
+                            <span class="material-symbols-outlined">
+                                expand_more
+                            </span>
+                        </button>
                     </div>
                 </div>
-            </div>
+                <div class="navbar-right">
+                    <button type="button" class="toggle-menu">
+                        <span class="material-symbols-outlined">
+                            <i class="icon icon-24 icon-apps"></i>
+                            search
+                        </span>
+                    </button>
+                    <div class="popover hidden" role="button" id="popover602508">
+                        <div class="popover-arrow"></div>
+                        <div class="popover-body">
+                            <div class="brands-pop d-flex flex-column gap-3 align-items-center justify-content-between">
+                                <a class="pop-link" href="#order_form" title="Metropolitan.si">
+                                    <img src="https://govorise.metropolitan.si/static/img/metropolitan-logo.0d36f43c124f.svg"
+                                        alt="Metropolitan">
+                                </a>
+                                <a class="pop-link" href="#order_form" title="Aktivni.si">
+                                    <img src="https://govorise.metropolitan.si/static/img/aktivni-logo.b0edf3929d64.svg"
+                                        alt="Aktivni">
+                                </a>
+                                <a class="pop-link" href="#order_form" title="Cosmopolitan.si">
+                                    <img src="https://govorise.metropolitan.si/static/img/cosmopolitan-logo.0d5356a47970.svg"
+                                        alt="Cosmopolitan.si">
+                                </a>
+                                <a class="pop-link" href="#order_form" title="Elle.si">
+                                    <img src="https://govorise.metropolitan.si/static/img/elle-logo.3e36442bf250.svg"
+                                        alt="Elle">
+                                </a>
+                                <a class="pop-link" href="#order_form" title="avto-magazin.si">
+                                    <img src="https://govorise.metropolitan.si/static/img/avtomagazin-logo.136d30bde124.svg"
+                                        alt="Avto-magazin">
+                                </a>
+                                <a class="pop-link" href="#order_form" title="govori.se">
+                                    <img src="https://govorise.metropolitan.si/static/img/govorise-logo.267bcf3df958.svg"
+                                        alt="Govori.se">
+                                </a>
+                                <a class="pop-link" href="#order_form" title="Sensa.si">
+                                    <img src="https://govorise.metropolitan.si/static/img/sensa-logo.31d6938d135b.svg"
+                                        alt="Sensa">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                </div>
     </div>
     </nav>
-    <script>
-        const menuButton = document.getElementById('menuButton');
-        const menuToggler = document.getElementById('menuToggler');
-        const popover602508 = document.getElementById('popover602508');
-        const burgermenu = document.getElementById('burgermenu');
-        const menuTogglerOff = document.getElementById('menuTogglerOff');
 
-        menuButton.addEventListener('click', function () {
-            popover602508.classList.toggle('hidden');
-        });
-        const offcanvas = document.querySelector('.offcanvas');
-
-        menuToggler.addEventListener('click', function () {
-            burgermenu.classList.toggle('hidden');
-        });
-
-        menuTogglerOff.addEventListener('click', function () {
-              burgermenu.classList.toggle('hidden');
-  });
-    </script>
     </header>
     <!-- ==== FIN HEADER ==== -->
     <main data-index="0">
@@ -1615,6 +1402,7 @@
     </main>
     </div>
     <a class="adom-button">Lorem Ipsum</a>
+
     <!-- ==== FOOTER ==== -->
     <footer id="footer">
         <div id="footer-slider">
@@ -1622,189 +1410,247 @@
                 <div class="slide-track">
 
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://aktivni.metropolitan.si" title="Aktivni.si">
+                        <a href="#order_form" title="Aktivni.si">
                             <img src="https://govorise.metropolitan.si/static/img/aktivni-logo-white.b78502231e33.svg"
                                 alt="Aktivni">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://cosmopolitan.metropolitan.si" title="Cosmopolitan.si">
+                        <a href="#order_form" title="Cosmopolitan.si">
                             <img src="https://govorise.metropolitan.si/static/img/cosmopolitan-logo-white.b58f55cf45de.svg"
                                 alt="Cosmopolitan.si">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://elle.metropolitan.si" title="Elle.si">
+                        <a href="#order_form" title="Elle.si">
                             <img src="https://govorise.metropolitan.si/static/img/elle-logo-white.ec7efc4f66fb.svg"
                                 alt="Elle">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://metropolitan.si" title="Metropolitan.si">
+                        <a href="#order_form" title="Metropolitan.si">
                             <img src="https://govorise.metropolitan.si/static/img/metropolitan-logo-white.75264b2f86d0.svg"
                                 alt="Metropolitan">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://avtomagazin.metropolitan.si" title="avto-magazin.si">
+                        <a href="#order_form" title="avto-magazin.si">
                             <img src="https://govorise.metropolitan.si/static/img/avtomagazin-logo-white.387e92b3f383.svg"
                                 alt="Avto-magazin">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://govorise.metropolitan.si" title="govori.se">
+                        <a href="#order_form" title="govori.se">
                             <img src="https://govorise.metropolitan.si/static/img/govorise-logo-white.c052b4276d93.svg"
                                 alt="Govori.se">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://sensa.metropolitan.si" title="Sensa.si">
+                        <a href="#order_form" title="Sensa.si">
                             <img src="https://govorise.metropolitan.si/static/img/sensa-logo-white.8b78781f2209.svg"
                                 alt="Sensa">
                         </a>
                     </div>
 
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://aktivni.metropolitan.si" title="Aktivni.si">
+                        <a href="#order_form" title="Aktivni.si">
                             <img src="https://govorise.metropolitan.si/static/img/aktivni-logo-white.b78502231e33.svg"
                                 alt="Aktivni">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://cosmopolitan.metropolitan.si" title="Cosmopolitan.si">
+                        <a href="#order_form" title="Cosmopolitan.si">
                             <img src="https://govorise.metropolitan.si/static/img/cosmopolitan-logo-white.b58f55cf45de.svg"
                                 alt="Cosmopolitan.si">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://elle.metropolitan.si" title="Elle.si">
+                        <a href="#order_form" title="Elle.si">
                             <img src="https://govorise.metropolitan.si/static/img/elle-logo-white.ec7efc4f66fb.svg"
                                 alt="Elle">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://metropolitan.si" title="Metropolitan.si">
+                        <a href="#order_form" title="Metropolitan.si">
                             <img src="https://govorise.metropolitan.si/static/img/metropolitan-logo-white.75264b2f86d0.svg"
                                 alt="Metropolitan">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://avtomagazin.metropolitan.si" title="avto-magazin.si">
+                        <a href="#order_form" title="avto-magazin.si">
                             <img src="https://govorise.metropolitan.si/static/img/avtomagazin-logo-white.387e92b3f383.svg"
                                 alt="Avto-magazin">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://govorise.metropolitan.si" title="govori.se">
+                        <a href="#order_form" title="govori.se">
                             <img src="https://govorise.metropolitan.si/static/img/govorise-logo-white.c052b4276d93.svg"
                                 alt="Govori.se">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://sensa.metropolitan.si" title="Sensa.si">
+                        <a href="#order_form" title="Sensa.si">
                             <img src="https://govorise.metropolitan.si/static/img/sensa-logo-white.8b78781f2209.svg"
                                 alt="Sensa">
                         </a>
                     </div>
 
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://aktivni.metropolitan.si" title="Aktivni.si">
+                        <a href="#order_form" title="Aktivni.si">
                             <img src="https://govorise.metropolitan.si/static/img/aktivni-logo-white.b78502231e33.svg"
                                 alt="Aktivni">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://cosmopolitan.metropolitan.si" title="Cosmopolitan.si">
+                        <a href="#order_form" title="Cosmopolitan.si">
                             <img src="https://govorise.metropolitan.si/static/img/cosmopolitan-logo-white.b58f55cf45de.svg"
                                 alt="Cosmopolitan.si">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://elle.metropolitan.si" title="Elle.si">
+                        <a href="#order_form" title="Elle.si">
                             <img src="https://govorise.metropolitan.si/static/img/elle-logo-white.ec7efc4f66fb.svg"
                                 alt="Elle">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://metropolitan.si" title="Metropolitan.si">
+                        <a href="#order_form" title="Metropolitan.si">
                             <img src="https://govorise.metropolitan.si/static/img/metropolitan-logo-white.75264b2f86d0.svg"
                                 alt="Metropolitan">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://avtomagazin.metropolitan.si" title="avto-magazin.si">
+                        <a href="#order_form" title="avto-magazin.si">
                             <img src="https://govorise.metropolitan.si/static/img/avtomagazin-logo-white.387e92b3f383.svg"
                                 alt="Avto-magazin">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://govorise.metropolitan.si" title="govori.se">
+                        <a href="#order_form" title="govori.se">
                             <img src="https://govorise.metropolitan.si/static/img/govorise-logo-white.c052b4276d93.svg"
                                 alt="Govori.se">
                         </a>
                     </div>
                     <div class="slide d-flex justify-content-center align-items-center">
-                        <a href="https://sensa.metropolitan.si" title="Sensa.si">
+                        <a href="#order_form" title="Sensa.si">
                             <img src="https://govorise.metropolitan.si/static/img/sensa-logo-white.8b78781f2209.svg"
                                 alt="Sensa">
                         </a>
                     </div>
-
 
 
                 </div>
             </div>
         </div>
-        <div id="footer-main" class="container g-sm-0">
-            <div class="d-flex flex-lg-row flex-column justify-content-between">
-                <div class="">
-                    <h2>Govori.se </h2>
-                    <h3>Kar se zanimivega zgodi, o tem se pri nas govori!</h3>
-                </div>
-                <div class=" d-flex flex-column">
-                    <a href="/kontakt/">Pišite nam</a>
-                    <a href="https://www.adriamedia.si/naroci-revijo/" target="_blank">Naročite revijo</a>
-                    <a href="https://www.adriamedia.si/pravno-obvestilo/" target="_blank">Pravno obvestilo</a>
-                    <a href="https://www.adriamedia.si/politika-varstva-zasebnosti/" target="_blank">Politika varstva
-                        zasebnosti</a>
-                </div>
-                <div class="d-flex flex-column">
-                    <a style="cursor:pointer;"
-                        onclick="window.__tcfapi('displayConsentUi', 2, function() {} );">Nastavitve
-                        zasebnosti</a>
-                    <a href="https://www.adriamedia.si/spletne-strani/piskotki" target="_blank">O piškotkih</a>
-                    <a href="https://www.adriamedia.si/potisna-obvestila/" target="_blank">Potisna obvestila</a>
-                    <a href="https://www.adriamedia.si/oglasevanje/" target="_blank">Oglaševanje</a>
-                </div>
-                <div class="">
-                    <div id="footer-social" class="d-flex flex-row justify-content-center">
-                        <a href="https://twitter.com/govorise" target="_blank" rel="nofollow noopener"
-                            title="Spremljajte Govori.si na tviterju">
-                            <i class="icon  icon-twitter" aria-hidden="true"></i></a>
-
-                        <a href="https://www.facebook.com/govorise" target="_blank" rel="nofollow noopener"
-                            title="Spremljajte Govori.se na facebooku">
-                            <i class="icon  icon-facebook" aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/govori.se/" target="_blank" rel="nofollow noopener"
-                            title="Spremljajte Govori.si na instagramu">
-                            <i class="icon  icon-instagram" aria-hidden="true"></i></a>
-                        <a class="social-link rss" href="https://govori.se/feeds/latest/" target="_blank" rel="bookmark"
-                            title="Beri Govori.se z RSS bralnikom">
-                            <i class="icon  icon-rss-feed" aria-hidden="true"></i></a>
-                    </div>
-                </div>
+        <div id="footer-main" class="container">
+            <div class="d-flex flex-lg-row justify-content-between">
+                <div">
+                    <h2 class="title">Govori.se </h2>
+                    <h3 class="title">Kar se zanimivega zgodi, o tem se pri nas govori!</h3>
             </div>
-            <div class="row">
-                <div id="copyright" class="col-xs-12 text-center">
-                    ISSN 2591-1287, © 2023 Govori.se, <a rel="noopener" href="https://www.adriamedia.si"
-                        title="Adria Media Ljubljana, založništvo in trženje, d.o.o.">Adria
-                        Media Ljubljana, založništvo in trženje, d.o.o.</a>
+            <div class=" d-flex flex-column">
+                <a href="#order_form">Pišite nam</a>
+                <a href="#order_form"" target=" _blank">Naročite revijo</a>
+                <a href="#order_form" target="_blank">Pravno obvestilo</a>
+                <a href="#order_form" target="_blank">Politika varstva
+                    zasebnosti</a>
+            </div>
+            <div class="d-flex flex-column">
+                <a style="cursor:pointer;" onclick="window.__tcfapi('displayConsentUi', 2, function() {} );">Nastavitve
+                    zasebnosti</a>
+                <a href="#order_form" target="_blank">O piškotkih</a>
+                <a href="#order_form" target="_blank">Potisna obvestila</a>
+                <a href="#order_form" target="_blank">Oglaševanje</a>
+            </div>
+            <div class="">
+                <div id="footer-social" class="d-flex flex-row justify-content-center">
+                    <a href="#order_form" target="_blank" rel="nofollow noopener"
+                        title="Spremljajte Govori.si na tviterju">
+                        <i class="fa-brands fa-twitter"></i></a>
+                    <a href="#order_form" target="_blank" rel="nofollow noopener"
+                        title="Spremljajte Govori.se na facebooku">
+                        <i class="fa-brands fa-facebook"></i></a>
+                    <a href="#order_form" target="_blank" rel="nofollow noopener"
+                        title="Spremljajte Govori.si na instagramu">
+                        <i class="fa-brands fa-instagram"></i></a>
+                    <a href="#order_form" target="_blank" rel="bookmark" title="Beri Govori.se z RSS bralnikom">
+                        <i class="fa-solid fa-rss"></i></a>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div id="copyright" class="col-xs-12 text-center">
+                ISSN 2591-1287, © 2023 Govori.se, <a rel="noopener" href="#order_form"
+                    title="Adria Media Ljubljana, založništvo in trženje, d.o.o.">Adria
+                    Media Ljubljana, založništvo in trženje, d.o.o.</a>
+            </div>
+        </div>
+        </div>
+
     </footer>
 
     <!-- ==== FOOTER END ==== -->
+    <div class="offcanvas-backdrop fade" id="offcanvas-backdrop"></div>
+
+    <script>
+
+        const offcanvas = document.querySelector('.offcanvas');
+        const burgermenu = document.getElementById('burgermenu');
+        const burgerButtons = document.querySelectorAll('.nav-toggler');
+        const popover602508 = document.getElementById('popover602508');
+        const menuButton = document.getElementById('menuButton');
+
+        const toggleButtons = document.querySelectorAll('.toggle-menu');
+        const search = document.getElementById('search');
+        const offcanvasBackdrop = document.getElementById('offcanvas-backdrop');
+        const stickyTop = document.querySelector('.sticky-top')
+
+        burgerButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                offcanvasBackdrop.classList.toggle('show');
+                document.querySelectorAll('.navbar-left')[1].classList.toggle('show')
+                // document.body.style.overflow='hidden'
+                // document.body.style.overflow='auto'
+            });
+        });
+
+        menuButton.addEventListener('click', function () {
+            popover602508.classList.toggle('hidden');
+        });
+
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                search.classList.toggle('hidden');
+
+                offcanvasBackdrop.classList.toggle('show');
+            });
+
+        });
+
+        document.addEventListener('scroll', function () {
+            const offsetTOp = window.pageYOffset || document.documentElement.scrollTop
+
+            if (offsetTOp > 54) {
+
+                stickyTop.style.top = "0"
+            } else {
+                stickyTop.style.top = "54px"
+            }
+        })
+
+    </script>
+
+    <script>
+        const slider = document.querySelector("#footer-slider");
+        slider.addEventListener('mouseenter', () => {
+            slider.style.animationPlayState = 'paused';
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            slider.style.animationPlayState = 'running';
+        });
+
+    </script>
 
     <script type="text/javascript">
         $(".orderType").on("click", ".orderTypeButton", function () {
@@ -1879,8 +1725,9 @@
             })
         })
     </script>
-    <!-- ============== Font Awesome ===============
-  <script src="https://kit.fontawesome.com/22080d2d53.js" crossorigin="anonymous"></script> -->
+    ============== Font Awesome ===============
+    <script src="https://kit.fontawesome.com/22080d2d53.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
